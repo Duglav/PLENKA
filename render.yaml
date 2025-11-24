@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: plenkabot
+    env: go
+    buildCommand: go build -o main .
+    startCommand: ./main
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
